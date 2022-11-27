@@ -22,6 +22,6 @@ export function* loadCountryDetail(): any {
 }
 
 export default function* countrySaga(): any {
-  yield takeLeading(LOAD_COUNTRY_DETAIL,loadAllData);
+  yield fork(loadAllData);
   yield fork(loadCountryDetail);
 }
