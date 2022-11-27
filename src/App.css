@@ -1,38 +1,100 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+  width: 100%;
+  height: 100%;
   min-height: 100vh;
+  min-width: 98vw;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   display: flex;
   flex-direction: column;
+}
+
+.App > * {
+  padding: 20px 150px;
+  transition: all 0.5s ease;
+}
+
+.App .themeControl {
+  font-size: 20px;
+  transition: all 0.5s ease;
+}
+
+.App .headerForm {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.App .theme{
+  display: inline-block;
+  cursor: pointer;
+}
+.App .country__info {
+  flex-grow: 1;
 }
 
-.App-link {
-  color: #61dafb;
+.headerForm input {
+  outline: none;
+  padding: 5px 15px;
+  border-radius: 5px;
+  font-size: 15px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  min-width: 200px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.headerForm select {
+  padding: 5px 15px;
+  border-radius: 5px;
+  outline: none;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 15px;
+  border: 1px solid #aaa;
+}
+
+/* Light Mode styles */
+
+.lightMode {
+  background-color: #fff;
+  color: #000;
+}
+
+.lightMode .country__info, .countryList {
+  background-color: rgb(250, 250, 250);
+}
+
+.lightMode .themeControl {
+  border-bottom: 1px solid #ccc;
+}
+
+.lightMode .headerForm input,
+.lightMode .headerForm select {
+  background-color: #fff;
+  border: 1px solid #aaa;
+  color: #000;
+}
+
+/* Dark Mode styles */
+
+.darkMode {
+  background-color: rgb(20, 20, 20);
+  color: #fff;
+}
+
+.darkMode .country__info, .darkMode .countryList {
+  background-color: rgb(25, 25, 25);
+}
+
+.darkMode .themeControl {
+  border-bottom: 1px solid #222;
+}
+
+.darkMode .headerForm input,
+.darkMode .headerForm select {
+  background-color: #666;
+  border: 1px solid #ddd;
+  color: #fff;
 }

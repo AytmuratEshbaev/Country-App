@@ -1,0 +1,12 @@
+.country .country__flag {
+  width: 320px;
+  height: 213px;
+}
+
+.country {
+  margin: 10px 0;
+}
+
+.country__name{
+    margin: 10px 0;
+}
