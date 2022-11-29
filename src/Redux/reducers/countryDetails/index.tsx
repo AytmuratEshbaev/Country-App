@@ -1,8 +1,12 @@
-import { LOAD_COUNTRY_DETAIL, LOAD_COUNTRY_DETAIL_SUCCESS } from "../../action";
+import {
+  LOAD_COUNTRY_DETAIL,
+  LOAD_COUNTRY_DETAIL_SUCCESS,
+} from "../../action";
 
 let initial = {
-  name: "",
-  data: [],
+  code: "",
+  data: null,
+  loading: false
 };
 
 export default function countryDetailsReducer(state = initial, action: any) {
@@ -10,12 +14,14 @@ export default function countryDetailsReducer(state = initial, action: any) {
     case LOAD_COUNTRY_DETAIL:
       return {
         ...state,
-        name: action.payload,
+        code: action.payload,
+        loading: true
       };
     case LOAD_COUNTRY_DETAIL_SUCCESS:
       return {
         ...state,
         data: action.payload,
+        loading: false
       };
     default:
       return state;

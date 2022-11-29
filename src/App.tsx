@@ -26,7 +26,7 @@ function App() {
     region,
     search
   );
-
+  
   let dispatch = useDispatch();
 
   useEffect(() => {    

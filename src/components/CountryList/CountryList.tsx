@@ -1,6 +1,5 @@
 import "./CountryList.css";
 import Country from "../Country/Country";
-import { Link } from "react-router-dom";
 
 type CountryList = {
   countries: any[];
@@ -18,6 +17,7 @@ function CountryList(props: CountryList) {
             population={country.population}
             region={country.region}
             capital={country.capital}
+            code={country.cca3}
           />
       ))}
     </div>
